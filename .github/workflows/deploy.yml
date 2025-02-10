@@ -5,10 +5,22 @@ on:
     branches:
       - main
 
+
+# 하나의 workflow는 1개 이상의 job으로 구성된다.
 jobs:
+  # job을 식별하기 위한 이름을 설정한다.
   My-Deploy-job:
+
+    # job을 실행하는 runner를 설정한다.
     runs-on: ubuntu-latest
 
+    # job 내부에서 실행할 step을 설정한다.
+    # job은 여러 step들로 구성되어 있다.
     steps:
       - name: Hello World 찍기
         run: echo "Hello World"
+
+      - name: 여러 명령어 문장 작성하기
+        run: |
+          echo "Good"
+          echo "Morning"
