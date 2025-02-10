@@ -24,3 +24,9 @@ jobs:
         run: |
           echo "Good"
           echo "Morning"
+
+      - name: github actions 자체에 저장된 환경변수 출력하기
+        run: |
+          echo $GITHUB_ACTOR
+          echo $GITHUB_SHA
+          echo $GITHUB_REPOSITORY
